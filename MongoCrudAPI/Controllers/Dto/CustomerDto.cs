@@ -11,5 +11,7 @@ namespace MongoCrudAPI.Controllers.Dto
         public string Email { get; set; }
 
         public string Name { get; set; }
+
+        public string RoleName { get; set; }
     }
 }

@@ -13,5 +13,8 @@ namespace MongoCrudAPI.Models
 
         [BsonElement("name")]
         public string Name { get; set; }
+
+        [BsonElement("role")]
+        public string RoleName { get; set; }
     }
 }

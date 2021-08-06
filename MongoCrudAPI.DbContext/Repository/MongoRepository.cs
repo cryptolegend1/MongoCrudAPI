@@ -27,6 +27,11 @@ namespace MongoCrudAPI.DbContext.Repository
             return ((MongoCollectionAttribute)documentType.GetCustomAttributes(typeof(MongoCollectionAttribute), true).FirstOrDefault())?.CollectionName;
         }
 
+        public IMongoCollection<TMongoDocument> GetCollection()
+        {
+            return _collection;
+        }
+
         public virtual IEnumerable<TMongoDocument> GetAll()
         {
             return _collection.Find<TMongoDocument>(document => true).ToList();

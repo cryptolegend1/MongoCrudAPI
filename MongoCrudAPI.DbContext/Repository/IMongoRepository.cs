@@ -12,6 +12,8 @@ namespace MongoCrudAPI.DbContext.Repository
 {
     public interface IMongoRepository<TMongoDocument> where TMongoDocument : IMongoDocument
     {
+        IMongoCollection<TMongoDocument> GetCollection();
+
         IEnumerable<TMongoDocument> GetAll();
 
         IEnumerable<TMongoDocument> FilterBy(FilterDefinition<TMongoDocument> filter);

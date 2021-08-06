@@ -15,6 +15,8 @@ namespace MongoCrudAPI.Application
     {
         private readonly IMongoRepository<TMongoDocument> _repository;
 
+        public IMongoRepository<TMongoDocument> Repository { get { return _repository; } }
+
         public MongoCrudApiController(IMongoRepository<TMongoDocument> repository)
         {
             _repository = repository;
